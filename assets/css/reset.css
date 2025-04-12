@@ -1,0 +1,175 @@
+/* @author:Erick14911
+ * */
+/*WAIT:*/
+@charset "UTF-8";
+:root{
+  --black: #000;
+  --white:  #FFF;
+  --color-a: #00CF00;
+  --shade-a: #00AD00;
+  --shadow-a: #008B00;
+  --border-a: #00F000;
+  --mark-a: rgb(0, 173, 0); /* #00F700 */
+}
+@media(prefers-color-scheme: dark){
+    :root{
+      --black: #000;
+      --white:  #FFF;
+      --color-a: #00CF00;
+      --shade-a: #00F700;
+      --shadow-a: #00F000;
+      --border-a: #008B00;
+      --mark-a: rgb(0, 173, 0); /* #00AD00; */
+    }
+}
+
+*,
+::before,
+::after{
+  margin: 0px; 
+  padding: 0px; 
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html{
+    font-size: 10px; /*62.5%*/
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+p a{
+    display: inline;
+    text-decoration: underline;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption, hgroup, img, video, iframe, picture{
+    display: block;
+    max-width: 100%;
+}
+
+form, input, select, textarea, button, label{
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+form{
+    display: inline-flex;
+    /* row-reverse wrap; column-reverse nowrap */
+    flex-flow: column wrap;
+    /* center; space-around evenly between; unset; stretch; baseline; */
+    justify-content: flex-start;
+    align-items: flex-start;
+} 
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+/* Sans Serief, Brutalism, Helvetica, Geramond, Trajan,
+ * Futura, Bickham Script pro, Bodoni, Gotham, Rockwell
+ */
+@font-face{
+  font-family: "icons";
+  src: url("../../public/fonts/.woff2") format("woff2"),
+       url("../../public/fonts/.woff") format("woff"),
+       url("../../public/fonts/.ttf") format("truetype"),
+       url("../../public/fonts/.eot?#iefix") format("embedded-opentype"),
+       url("../../public/fonts/.svg#WebSymbolsRegular") format("svg"),
+       url("../../public/fonts/.eot");    
+}
+.icons{
+    font-family: 'icons', Helvetica, sans-serif;
+    /* bold; lighter; */
+    font-weight: normal;
+    /* italic; oblique; */
+    font-style: normal;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    font-size: 12px;
+    color: black;
+    text-shadow: 0px 0px 0px black;
+    /* capitalize; uppercase; lowercase; */
+    text-transform: normal;
+    /* small-caps slashed-zero; no-common-ligatures proportional-nums; common-ligatures tabular-nums; */
+    font-variant: normal;
+}
+/*****************/
+.content{  
+    width: 100%;
+    height: auto;
+    overflow-y: visible; /* hidden; scroll; */
+    scroll-behavior: auto; /* smooth */
+    display: grid;
+    /* repeat(auto-fill, calc(25%-10px)) 15% 35%; */
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+    "header header"
+    "nav    nav"
+    "aside  section"
+    "footer footer";
+}
+.header{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: justify;
+    padding: 0px;
+    grid-area: header;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: justify;
+    padding: 0px;
+    grid-area: nav;
+}
+.section{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: justify;
+    padding: 0px;
+    grid-area: section;
+}
+.aside{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: justify;
+    padding: 0px;
+    grid-area: aside;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    /* center; right; bottom; top; */
+    text-align: justify;
+    padding: 0px;
+    grid-area: footer;
+}
+/********************/
